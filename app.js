@@ -29,11 +29,12 @@ Example: isAdult(21) should return 'Adult'.
 Complete the exercise in the space below:
 */
 
-function isAdult(age){}
-if (age >=18){
-    return "Adult";}{    
-    else "Child";
+function isAdult(age){
+if (age >=18) {
+    return "Adult";
+    } else {
+    return "Minor";
+    }
 }
-
 
 console.log('Exercise 2 Result:', isAdult(21));
