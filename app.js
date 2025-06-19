@@ -112,10 +112,27 @@ Complete the exercise in the space below:
 
 function maxOfThree(num1, num2, num3) {
   if (num1 > num2 && num1 > num3) {
-  return num1
+    return num1
   } else if (num2 > num1 && num2 > num3) {
     return num2
   } else (num3 > num1 && num3 > num2)
     return num3 
 }
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
+
+/*
+Exercise 7: calculateTip()
+
+Create a function called calculateTip. It should take two arguments: 
+the bill amount and the tip percentage (as a whole number). 
+The function should return the amount of the tip.
+
+Example: calculateTip(50, 20) should return 10.
+
+Complete the exercise in the space below:
+*/
+
+function calculateTip(bill,tip) 
+  { return bill * (tip/100)}
+
+console.log('Exercise 7 Result:', calculateTip(50, 20));
