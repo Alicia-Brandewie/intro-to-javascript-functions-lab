@@ -178,14 +178,47 @@ Complete the exercise in the space below:
 basicCalculator = (num1, num2, operation) =>
   {if (operation === "add")
     {return num1 + num2}
-  if (operation === "subtract")
+  else if (operation === "subtract")
     {return num1 - num2}
-  if (operation === "multiply")
+  else if (operation === "multiply")
     {return num1 * num2}
-  if (operation === "divide")
+  else (operation === "divide")
     {return num1 / num2}
   }
 
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+
+/*
+Exercise 10: calculateGrade()
+
+Define a function called calculateGrade. 
+It should take a numerical score and return the corresponding letter 
+grade (A, B, C, D, F). 
+
+For example, 90 and above yields an 'A', 80-89 is a 'B', 
+and 70-79 is a 'C', 60-69 is a 'D' and anything lower than a 60 is an 'F'.
+
+Example: calculateGrade(100) should return A.
+
+Complete the exercise in the space below:
+*/
+
+calculateGrade = (score) =>
+  {if (score >= 90)
+    {return "A"}
+  else if (score <= 89, score >= 80)
+    {return "B"}
+  else if (score <= 79, score >= 70)
+    {return "C"}
+  else if (score <= 69, score >= 60)
+    {return "D"}  
+  else (score > 60)
+    {return "F"}
+}
+
+console.log('Exercise 10 Result:', calculateGrade(85));
+
+
+
 
