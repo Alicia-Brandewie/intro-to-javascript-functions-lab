@@ -110,14 +110,13 @@ Example: maxOfThree(17, 4, 9) should return 17.
 Complete the exercise in the space below:
 */
 
-function maxOfThree(num1, num2, num3) {
-  if (num1 > num2 && num1 > num3) {
-    return num1
-  } else if (num2 > num1 && num2 > num3) {
-    return num2
-  } else (num3 > num1 && num3 > num2)
-    return num3 
-}
+function maxOfThree(num1, num2, num3) 
+  {if (num1 > num2 && num1 > num3) 
+      {return num1} 
+  else if (num2 > num1 && num2 > num3) 
+      {return num2} 
+  else (num3 > num1 && num3 > num2)
+    return num3 }
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
 
 /*
@@ -136,3 +135,26 @@ function calculateTip(bill,tip)
   { return bill * (tip/100)}
 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
+
+/*
+Exercise 8: convertTemperature()
+
+Write a function named convertTemperature. 
+It takes two arguments: a temperature and a string representing the 
+scale ('C' for Celsius, 'F' for Fahrenheit). 
+Convert the temperature to the other scale.
+
+Example: convertTemperature(32, 'C') should return 89.6 (Fahrenheit).
+Example: convertTemperature(32, 'F') should return 0 (Celsius).
+
+Complete the exercise in the space below:
+*/
+
+function convertTemperature(temp, scale)
+  {if (scale === "C") 
+    {return temp * (9/5) + 32 + " (Fahrenheit)"}
+  else (scale === "F") 
+    {return ((temp-32)*(5/9)) + " (Celsius)"} } 
+
+
+console.log('Exercise 8 Result:', convertTemperature(32, "C"));
