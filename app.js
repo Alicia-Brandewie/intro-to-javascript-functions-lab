@@ -204,20 +204,42 @@ Example: calculateGrade(100) should return A.
 Complete the exercise in the space below:
 */
 
-calculateGrade = (score) =>
-  {if (score >= 90)
-    {return "A"}
-  else if (score <= 89, score >= 80)
-    {return "B"}
-  else if (score <= 79, score >= 70)
-    {return "C"}
-  else if (score <= 69, score >= 60)
-    {return "D"}  
-  else (score > 60)
-    {return "F"}
+calculateGrade = (score) => {
+  if (score >= 90) {
+    return "A"}
+  else if (score <= 89, score >= 80) {
+    return "B"}
+  else if (score <= 79, score >= 70) {
+    return "C"}
+  else if (score <= 69, score >= 60) {
+    return "D"}  
+  else (score > 60) {
+    return "F"
+  }
 }
 
 console.log('Exercise 10 Result:', calculateGrade(85));
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
+
+Complete the exercise in the space below:
+*/
+
+createUsername = (firstName, lastName) =>
+  {}
+
+
+console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
 
 
 
