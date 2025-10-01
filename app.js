@@ -30,9 +30,9 @@ Complete the exercise in the space below:
 */
 
 function isAdult(age){
-if (age >=18) {
+if (age >= 18) {
     return "Adult";
-    } else {
+  } else {
     return "Minor";
     }
 }
@@ -53,14 +53,18 @@ Complete the exercise in the space below:
 */
 
 function isCharAVowel(character){
-if (character === "a" || "e" || "i" || "o" || "u" ) {
-    return "true";
-    } else {
-    return "false";
-    }
+  // if (character === "a" || "e" || "i" || "o" || "u" ) {
+  //     return "true";
+  //   } else {
+  //     return "false";
+  //     }
+  // }
+return ['a', 'e', 'i', 'o', 'u'].includes(character);
+  // .includes() is a built in 
 }
 
-console.log('Exercise 3 Result:', isCharAVowel("a")); 
+
+console.log('Exercise 3 Result:', isCharAVowel("b")); 
 
 /*
 Exercise 4: generateEmail()
@@ -75,7 +79,7 @@ Complete the exercise in the space below:
 */
 
 function generateEmail(name, domain) {
-    return (name +"@"+domain)
+    return name + "@" + domain
 }
 
 
@@ -94,7 +98,8 @@ Complete the exercise in the space below:
 */
 
 function greetUser(name, time) {
-    return ("Good " + time + ", " + name +"!")
+    // return ("Good " + time + ", " + name +"!")
+    return `Good ${time}, ${name}!`
 }
 
 console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
@@ -110,14 +115,22 @@ Example: maxOfThree(17, 4, 9) should return 17.
 Complete the exercise in the space below:
 */
 
-function maxOfThree(num1, num2, num3) 
-  {if (num1 > num2 && num1 > num3) 
-      {return num1} 
-  else if (num2 > num1 && num2 > num3) 
-      {return num2} 
-  else (num3 > num1 && num3 > num2)
-    return num3 }
-console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
+function maxOfThree(num1, num2, num3) {
+  // {if (num1 > num2 && num1 > num3) 
+  //     {return num1} 
+  // else if (num2 > num1 && num2 > num3) 
+  //     {return num2} 
+  // else (num3 > num1 && num3 > num2)
+  //   return num3 }
+  if (num1 > num2 && num1 > num3) {
+    return num1 
+  } else if (num2 > num1 && num2 > num3) { 
+    return num2
+  } else
+    return num3 
+}
+
+console.log('Exercise 6 Result:', maxOfThree(5, 8, 12));
 
 /*
 Exercise 7: calculateTip()
@@ -131,10 +144,12 @@ Example: calculateTip(50, 20) should return 10.
 Complete the exercise in the space below:
 */
 
-function calculateTip(bill,tip) 
-  { return bill * (tip/100)}
-
-console.log('Exercise 7 Result:', calculateTip(50, 20));
+function calculateTip(bill,tip) {
+  // { return bill * (tip/100)}
+  const num1 = bill * (tip/100)
+  return num1.toFixed(2) // out to second decimal point like consumer money
+}
+console.log('Exercise 7 Result:', calculateTip(40, 17));
 
 /*
 Exercise 8: convertTemperature()
@@ -150,14 +165,19 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 Complete the exercise in the space below:
 */
 
-function convertTemperature(temp, scale)
-  {if (scale === "C") 
-    {return temp * (9/5) + 32 + " (Fahrenheit)"}
-  else (scale === "F") 
-    {return ((temp-32)*(5/9)) + " (Celsius)"} } 
+function convertTemperature(temp, scale) {
+  // {if (scale === "C") 
+  //   {return temp * (9/5) + 32 + " (Fahrenheit)"}
+  // else (scale === "F") 
+  //   {return ((temp-32)*(5/9)) + " (Celsius)"} } 
+  if (scale === "C") {
+    return temp * (9/5) + 32 + " (Fahrenheit)"
+  } else if (scale === "F") {
+    return ((temp-32)*(5/9)) + " (Celsius)"
+  }
+} 
 
-
-console.log('Exercise 8 Result:', convertTemperature(32, "C"));
+console.log('Exercise 8 Result:', convertTemperature(32, "F"));
 
 /*
 Exercise 9: basicCalculator()
@@ -175,19 +195,30 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
-basicCalculator = (num1, num2, operation) =>
-  {if (operation === "add")
-    {return num1 + num2}
-  else if (operation === "subtract")
-    {return num1 - num2}
-  else if (operation === "multiply")
-    {return num1 * num2}
-  else (operation === "divide")
-    {return num1 / num2}
-  }
+const basicCalculator = (num1, num2, operation) => {
+  // {if (operation === "add")
+  //   {return num1 + num2}
+  // else if (operation === "subtract")
+  //   {return num1 - num2}
+  // else if (operation === "multiply")
+  //   {return num1 * num2}
+  // else (operation === "divide")
+  //   {return num1 / num2}
+  // }
 
+  if (operation === "add") {
+    return num1 + num2
+  } else if (operation === "subtract") {
+    return num1 - num2
+  } else if (operation === "multiply") {
+    return num1 * num2
+  } else if (operation === "divide") {
+    return num1 / num2
+  } else 
+    return 'invalid input'
+}
 
-console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+console.log('Exercise 9 Result:', basicCalculator(10, 5, "divide"));
 
 /*
 Exercise 10: calculateGrade()
@@ -206,19 +237,22 @@ Complete the exercise in the space below:
 
 calculateGrade = (score) => {
   if (score >= 90) {
-    return "A"}
-  else if (score <= 89, score >= 80) {
-    return "B"}
-  else if (score <= 79, score >= 70) {
-    return "C"}
-  else if (score <= 69, score >= 60) {
-    return "D"}  
-  else (score > 60) {
+    return "A"
+  } else if (score >= 80) {
+    return "B"
+  } else if ( score >= 70) {
+    return "C"
+  } else if (score >= 60) {
+    return "D"
+  } else if (score > 60) {
     return "F"
+  } else {
+    return 'invalid input'
   }
 }
 
-console.log('Exercise 10 Result:', calculateGrade(85));
+console.log('Exercise 10 Result:', calculateGrade(68));
+
 /*
 Exercise 11: createUsername()
 
@@ -235,11 +269,16 @@ Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
 Complete the exercise in the space below:
 */
 
-createUsername = (firstName, lastName) =>
-  {}
+createUsername = (firstName, lastName) => {
+  let firstPart = firstName.slice(0, 3)
+  let secondPart = lastName.slice(0, 3)
+  let thirdPart = (firstName + lastName).length
+  const username = firstPart + secondPart + thirdPart
+  return username
+}
 
 
-console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
+console.log('Exercise 11 Result:', createUsername("Sam", "Grest"));
 
 
 
